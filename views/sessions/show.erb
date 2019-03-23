@@ -8,3 +8,10 @@
 <form method="post" action="/sessions/<%= @sessions.id %>/delete" >
   <input type="submit" value="DELETE">
 </form>
+
+<p>People attending</p>
+<% @sessions.attendance.each do |attendee| %>
+  <ul>
+    <li> <%= attendee.first_name %> <%= attendee.last_name %> </li>
+  </ul>
+<% end %>

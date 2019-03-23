@@ -46,4 +46,12 @@ class Session
     sql = 'DELETE FROM sessions'
     SqlRunner.run(sql)
   end
+
+  #Search
+
+  def attendance
+    sql = 'SELECT members.* FROM members, sessions JOIN bookings ON bookings.session_id = sessions.id WHERE session_id = $1'
+    values = [@id]
+    return SqlRunner.run(sql, values).map {|member| Member.new(member)}
+  end
 end
