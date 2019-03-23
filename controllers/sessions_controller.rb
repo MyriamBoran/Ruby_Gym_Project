@@ -20,7 +20,7 @@ end
 post '/sessions' do
   @sessions = Session.new(params)
   @sessions.save
-  erb(:"session/create")
+  erb(:"sessions/create")
 end
 
 get '/sessions/:id/edit' do

@@ -23,17 +23,6 @@ post '/bookings' do
   erb(:"bookings/create")
 end
 
-get '/bookings/:id/edit' do
-  @bookings = Booking.find(params[:id])
-  erb(:"bookings/edit")
-end
-
-post '/bookings/:id' do
-  @bookings = Booking.new(params)
-  @bookings.update
-  redirect to '/bookings'
-end
-
 post '/bookings/:id/delete' do
   @booking = Booking.find(params[:id])
   @booking.delete

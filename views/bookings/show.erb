@@ -1,0 +1,6 @@
+<p> Member id: <%= @bookings.member_id %> </p>
+<p> Session no: <%= @bookings.session_id %> </p>
+
+<form method="post" action="/bookings/<%= @bookings.id %>/delete" >
+  <input type="submit" value="DELETE">
+</form>

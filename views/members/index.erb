@@ -1,0 +1,4 @@
+<% @members.each do |member| %>
+  <p> Member: <%= member.first_name %> <%= member.last_name %></p>
+  <a href='/members/<%= member.id %>'> DETAILS </a>
+<% end %>
