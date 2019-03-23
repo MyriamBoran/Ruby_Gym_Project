@@ -1,0 +1,35 @@
+logo {
+  position: absolute;
+}
+
+body {
+  background-color: #1a1d24;
+}
+
+.intro,
+.intro_list,
+a {
+  color: white;
+  font-family: "Abel";
+}
+
+.intro {
+  text-align: center;
+  font-size: 5em;
+}
+
+.intro_list {
+  display: flex;
+  justify-content: flex-end;
+  justify-content: space-evenly;
+}
+
+li {
+  display: flex;
+}
+
+p {
+  color: rgb(189, 37, 17);
+  font-family: "Abel";
+  font-size: 3em;
+}
