@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>RubyCore</title>
-  <link rel="stylesheet" href="css/styles.css" />
-  <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
-</head>
-<body>
-  <nav>
-    <img src="images/logo.png" alt="logo">
-    <ul class="intro_list">
-      <li><a href= "/sessions" >All Sessions</a></li>
-      <li><a href= "/sessions/new" >New session</a></li>
-    </ul>
-  </nav>
-  <%= yield %>
-</body>
+  <head>
+    <title>RubyCore</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+  </head>
+  <body class="main">
+    <nav>
+      <a href="/"><img src="../images/logo.png" alt="logo"></a>
+      <ul class="intro_list">
+        <li><a href= "/sessions" >•STAFF•</a></li>
+        <li><a href= "/users" >•USER•</a></li>
+      </ul>
+    </nav>
+    <%= yield %>
+  </body>
 </html>

@@ -2,12 +2,14 @@ logo {
   position: absolute;
 }
 
-body {
+/* body {
   background-color: #1a1d24;
-}
+} */
 
 .intro,
 .intro_list,
+#header,
+p,
 a {
   color: white;
   font-family: "Abel";
@@ -20,16 +22,26 @@ a {
 
 .intro_list {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   justify-content: space-evenly;
 }
 
 li {
   display: flex;
+  color: white;
 }
 
-p {
+#intro_p {
   color: rgb(189, 37, 17);
   font-family: "Abel";
   font-size: 3em;
+  text-align: center;
+}
+
+.main {
+  background-image: url(../images/nav-4.jpg);
+}
+
+#container {
+  background-image: url(../images/nav-2.jpg);
 }

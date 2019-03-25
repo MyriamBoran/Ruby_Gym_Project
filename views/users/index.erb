@@ -1,0 +1,7 @@
+<h2 id='header'>Welcome back!</h2>
+<a href= "/users/new" >√Sign up for classes</a>
+
+<% @users.each do |user| %>
+  <p id='header'> User: <%= user.first_name %> <%= user.last_name %></p>
+  <a href='/users/<%= user.id %>'> DETAILS </a>
+<% end %>

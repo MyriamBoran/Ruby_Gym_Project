@@ -1,4 +1,4 @@
 <% @sessions.each do |session| %>
-  <p> Session: <%= session.name %> /capacity: <%= session.capacity %></p>
+  <p id ="header"> Session: <%= session.name %> /capacity: <%= session.capacity %></p>
   <a href='/sessions/<%= session.id %>'> Show more </a>
 <% end %>

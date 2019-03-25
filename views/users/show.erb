@@ -1,0 +1,10 @@
+<p> First Name: <%= @users.first_name %> </p>
+<p> Last Name: <%= @users.last_name %> </p>
+
+<form method="get" action= "/users/<%= @users.id %>/edit" target = "_self">
+  <input type="submit" value="UPDATE">
+</form>
+
+<form method="post" action="/users/<%= @users.id %>/delete" >
+  <input type="submit" value="DELETE">
+</form>

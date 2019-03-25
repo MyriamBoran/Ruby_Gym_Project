@@ -9,7 +9,7 @@
   <input type="submit" value="DELETE">
 </form>
 
-<p>People attending</p>
+<p>People attending: </p>
 <% @sessions.attendance.each do |attendee| %>
   <ul>
     <li> <%= attendee.first_name %> <%= attendee.last_name %> </li>
