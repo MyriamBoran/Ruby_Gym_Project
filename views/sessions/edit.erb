@@ -2,10 +2,10 @@
 
 <form method="post" action="/sessions/<%= @sessions.id %>">
   <label for='name'><p>Session Name: </p></label>
-  <input type="text" id="name" name="name"/>
+  <input type="text" id="name" name="name" value="<%= @sessions.name %>"/>
 
   <label for='capacity'><p>Capacity: </p></label>
-  <input type="number" id="capacity" name="capacity"/>
+  <input type="number" id="capacity" name="capacity" value="<%= @sessions.capacity %>"/>
 
   <input type="submit" value="Update session">
 </form>
