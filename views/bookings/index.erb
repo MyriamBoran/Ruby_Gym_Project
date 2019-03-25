@@ -1,7 +1,16 @@
-<h2 id="header">Bookings:</h2>
+<h2 id="header">Bookings: </h2>
 
 <% @bookings.each do |booking| %>
-  <p> Member id: <%= booking.member_id %></p>
-  <p>Session no: <%= booking.session_id %></p>
+<ul>
+  <li> Member id: <%= booking.member_id%></li>
+  <li>Session no: <%= booking.session_id %></li>
   <a href='/bookings/<%= booking.id %>'> Show more </a>
+</ul>
 <% end %>
+
+<h2 id="header">Create new booking: </h2>
+
+
+<form method="get" action="/bookings/new" >
+  <input type="submit" value="CREATE">
+</form>
