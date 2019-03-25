@@ -1,11 +1,23 @@
-<p>New booking: </p>
+<p> New booking: </p>
 
 <form method="post" action="/bookings">
-  <label for='member_id'><p>Member id: </p></label>
-  <input type="text" id="member_id" name="member_id"/>
 
-  <label for='session_id'><p>Session no: </p></label>
-  <input type="text" id="session_id" name="session_id"/>
+  <label>
+    <select name="member_id">
+      <% for member in @members %>
+      <option value="<%= member.id %>"><%= member.first_name%> <%= member.last_name %></option>
+      <% end %>
+    </select>
+  </label>
 
-  <input type="submit" value="Add new booking">
+  <label>
+    <select name='session_id'>
+      <% for session in @sessions %>
+      <option value="<%= session.id %>"><%= session.name %></option>
+      <% end %>
+    </select>
+  </label>
+
+  <input class="button" type="submit" value="Add session"/>
+
 </form>

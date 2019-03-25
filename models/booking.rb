@@ -46,4 +46,20 @@ class Booking
     sql = 'DELETE FROM bookings'
     SqlRunner.run(sql)
   end
+
+  def member
+   sql = "SELECT * FROM members
+   WHERE id = $1"
+   values = [@member_id]
+   results = SqlRunner.run( sql, values )
+   return Member.new( results.first )
+ end
+
+ def session
+   sql = "SELECT * FROM sessions
+   WHERE id = $1"
+   values = [@session_id]
+   results = SqlRunner.run( sql, values )
+   return Session.new( results.first )
+ end
 end
