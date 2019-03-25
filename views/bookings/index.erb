@@ -2,9 +2,9 @@
 
 <% @bookings.each do |booking| %>
 <ul>
-  <li> Member id: <%= booking.member_id%></li>
-  <li>Session no: <%= booking.session_id %></li>
-  <a href='/bookings/<%= booking.id %>'> Show more </a>
+  <li> Member: <%= booking.member.first_name%> <%= booking.member.last_name%></li>
+  <li>Session: <%= booking.session.name %></li>
+  <a href='/bookings/<%= booking.id %>'> VIEW </a>
 </ul>
 <% end %>
 
