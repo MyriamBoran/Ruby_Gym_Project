@@ -20,7 +20,7 @@ end
 post '/sessions' do
   @sessions = Session.new(params)
   @sessions.save
-  erb(:"sessions/create")
+  redirect to "/sessions/#{@sessions.id}"
 end
 
 get '/sessions/:id/edit' do

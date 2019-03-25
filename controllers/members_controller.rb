@@ -20,7 +20,7 @@ end
 post '/members' do
   @members = Member.new(params)
   @members.save
-  erb(:"members/create")
+  redirect to "/members/#{@members.id}"
 end
 
 get '/members/:id/edit' do

@@ -22,7 +22,7 @@ end
 post '/bookings' do
   @bookings = Booking.new(params)
   @bookings.save
-  erb(:"bookings/create")
+  redirect to "/bookings/#{@bookings.id}"
 end
 
 post '/bookings/:id/delete' do
