@@ -1,5 +1,5 @@
 <p> Session name: <%= @sessions.name %> </p>
-<p> Session capacity: <%= @sessions.capacity %> </p>
+<p> Session capacity: <%= @sessions.attendance.count %> / <%= @sessions.capacity %> </p>
 
 <form method="get" action= "/sessions/<%= @sessions.id %>/edit" target = "_self">
   <input type="submit" value="UPDATE">

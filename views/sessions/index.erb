@@ -1,5 +1,5 @@
 <% @sessions.each do |session| %>
-  <p id ="header"> Session: <%= session.name %> / Capacity: <%= session.capacity %></p>
+  <p id ="header"> Session: <%= session.name %> / Capacity: <%= session.attendance.count %> / <%= session.capacity %></p>
   <a href="/sessions/<%= session.id %>"> VIEW </a>
 <% end %>
 
