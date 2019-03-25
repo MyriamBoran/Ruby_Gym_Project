@@ -9,9 +9,13 @@
   <input type="submit" value="DELETE">
 </form>
 
-<p>People attending: </p>
-<% @sessions.attendance.each do |attendee| %>
-  <ul>
-    <li> <%= attendee.first_name %> <%= attendee.last_name %> </li>
-  </ul>
+<% if @sessions.attendance.empty? %>
+  <p>No attendees</p>
+<% else %>
+  <p>People attending: </p>
+  <% @sessions.attendance.each do |attendee| %>
+    <ul>
+      <li> <%= attendee.first_name %> <%= attendee.last_name %> </li>
+    </ul>
+  <% end %>
 <% end %>

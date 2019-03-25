@@ -2,15 +2,21 @@
   <h2 id='header'>Welcome back!</h2>
   <a href= "/users/new" >√Sign up for classes</a>
 
-  <% @users.each do |user| %>
-  <table id="header">
-    <tr>
-      <th>User</th>
-    </tr>
-    <tr>
-      <td><%= user.first_name %> <%= user.last_name %></td>
-    </tr>
-  </table>
-  <a href='/users/<%= user.id %>'> DETAILS </a>
+
+  <% if @users.empty? %>
+    <p>No users</p>
+  <% else %>
+    <% @users.each do |user| %>
+    <table id="header">
+      <tr>
+        <th>User</th>
+      </tr>
+      <tr>
+        <td><%= user.first_name %> <%= user.last_name %></td>
+      </tr>
+    </table>
+    <a href='/users/<%= user.id %>'> DETAILS </a>
+    <% end %>
   <% end %>
+
 </div>

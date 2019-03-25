@@ -1,6 +1,10 @@
-<% @members.each do |member| %>
-  <p> Member: <%= member.first_name %> <%= member.last_name %></p>
-  <a href='/members/<%= member.id %>'> DETAILS </a>
+<% if @members.empty? %>
+  <p>No members</p>
+<% else %>
+  <% @members.each do |member| %>
+    <p> Member: <%= member.first_name %> <%= member.last_name %></p>
+    <a href='/members/<%= member.id %>'> DETAILS </a>
+  <% end %>
 <% end %>
 
 <form method="get" action="/members/new" >
