@@ -2,3 +2,7 @@
   <p> Member: <%= member.first_name %> <%= member.last_name %></p>
   <a href='/members/<%= member.id %>'> DETAILS </a>
 <% end %>
+
+<form method="get" action="/members/new" >
+  <input type="submit" value="CREATE">
+</form>
