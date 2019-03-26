@@ -2,9 +2,47 @@ logo {
   position: absolute;
 }
 
-/* body {
-  background-color: #1a1d24;
-} */
+.main {
+  background-image: url(../images/nav-4.jpg);
+}
+
+#container {
+  background-image: url(../images/nav-2.jpg);
+}
+
+#link1,
+#link2 {
+  font-size: 20px;
+  color: white;
+  align-items: center;
+  font-family: "Allerta Stencil";
+  text-decoration: none;
+}
+
+.intro_list {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 1em;
+  background-color: rgb(5, 2, 0, 0.2);
+  padding-bottom: 1em;
+}
+
+.intro {
+  text-align: center;
+  font-size: 5.3em;
+  margin-top: 1em;
+  padding-top: 20px;
+}
+
+#intro_p {
+  color: rgb(241, 68, 23);
+  font-size: 2em;
+  text-align: center;
+}
 
 .intro,
 .intro_list,
@@ -13,17 +51,11 @@ p,
 a {
   color: white;
   font-family: "Abel";
-}
-
-.intro {
   text-align: center;
-  font-size: 5em;
 }
 
-.intro_list {
-  display: flex;
-  justify-content: center;
-  justify-content: space-evenly;
+.staff_container {
+  text-align: center;
 }
 
 li {
@@ -31,17 +63,27 @@ li {
   color: white;
 }
 
-#intro_p {
-  color: rgb(189, 37, 17);
-  font-family: "Abel";
-  font-size: 3em;
+table {
+  margin-left: auto;
+  margin-right: auto;
+  align-content: center;
+  margin-top: 2em;
+}
+td,
+th {
+  padding-top: 5px;
+  padding-bottom: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  border: 1px solid #c02109;
+  background-color: #00000050;
   text-align: center;
 }
 
-.main {
-  background-image: url(../images/nav-4.jpg);
-}
-
-#container {
-  background-image: url(../images/nav-2.jpg);
+.button {
+  margin-top: 15px;
+  border-radius: 10px;
+  border: 3px solid #c02109;
+  font-family: "Allerta Stencil";
+  font-size: 1em;
 }
