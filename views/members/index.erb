@@ -1,12 +1,14 @@
-<% if @members.empty? %>
-  <p>No members</p>
-<% else %>
-  <% @members.each do |member| %>
-    <p> Member: <%= member.first_name %> <%= member.last_name %></p>
-    <a href='/members/<%= member.id %>'> DETAILS </a>
+<div class="staff_container">
+  <% if @members.empty? %>
+    <p>No members</p>
+  <% else %>
+    <% @members.each do |member| %>
+      <p> Member: <%= member.first_name %> <%= member.last_name %></p>
+      <a href='/members/<%= member.id %>'> DETAILS </a>
+    <% end %>
   <% end %>
-<% end %>
 
-<form method="get" action="/members/new" >
-  <input type="submit" value="CREATE">
-</form>
+  <form method="get" action="/members/new" >
+    <input class="button" type="submit" value="CREATE">
+  </form>
+</div>

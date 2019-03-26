@@ -1,20 +1,19 @@
 <h2 id="header">Bookings: </h2>
 
-<% if @bookings.empty? %>
-  <p>No bookings</p>
-<% else %>
-  <% @bookings.each do |booking| %>
-  <ul>
-    <li> Member: <%= booking.member.first_name%> <%= booking.member.last_name%></li>
-    <li>Session: <%= booking.session.name %></li>
-    <a href='/bookings/<%= booking.id %>'> VIEW </a>
-  </ul>
+<div class="staff_container id="header">
+  <% if @bookings.empty? %>
+    <p>No bookings</p>
+  <% else %>
+    <% @bookings.each do |booking| %>
+      <p> Member: <%= booking.member.first_name%> <%= booking.member.last_name%></p>
+      <p>Session: <%= booking.session.name %></p>
+      <a href='/bookings/<%= booking.id %>'> VIEW </a>
+    <% end %>
   <% end %>
-<% end %>
 
-<h2 id="header">Create new booking: </h2>
+  <h2 id="header">Create new booking: </h2>
 
-
-<form method="get" action="/bookings/new" >
-  <input type="submit" value="CREATE">
-</form>
+  <form method="get" action="/bookings/new" >
+    <input class="button" type="submit" value="CREATE">
+  </form>
+</div>

@@ -1,12 +1,14 @@
-<% if @sessions.empty? %>
-  <p>No sessions</p>
-<% else %>
-  <% @sessions.each do |session| %>
-    <p id ="header"> Session: <%= session.name %> / Capacity: <%= session.attendance.count %> / <%= session.capacity %></p>
-    <a href="/sessions/<%= session.id %>"> VIEW </a>
+<div class="staff_container">
+  <% if @sessions.empty? %>
+    <p>No sessions</p>
+  <% else %>
+    <% @sessions.each do |session| %>
+      <p id ="header"> Session: <%= session.name %> / Capacity: <%= session.attendance.count %> / <%= session.capacity %></p>
+      <a href="/sessions/<%= session.id %>"> VIEW </a>
+    <% end %>
   <% end %>
-<% end %>
 
-<form method="get" action="/sessions/new" >
-  <input type="submit" value="CREATE">
-</form>
+  <form method="get" action="/sessions/new" >
+    <input class="button" type="submit" value="CREATE">
+  </form>
+</div>
