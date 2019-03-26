@@ -4,15 +4,23 @@
     <title>RubyCore</title>
     <link rel="stylesheet" href="/css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil" rel="stylesheet">
   </head>
+
   <body class="main">
-    <nav>
-      <a href="/"><img src="/images/logo.png" alt="logo"></a>
-      <ul class="intro_list">
-        <li><a href= "/staff" >•STAFF•</a></li>
-        <li><a href= "/users" >•USER•</a></li>
-      </ul>
-    </nav>
+    <a href="/"><img src="/images/logo.png" alt="logo"></a>
+    <header class="intro_list">
+      <div><a id="link1" href= "/staff">†staff</a></div>
+      <div><a id="link2" href= "/users">†user</a></div>
+    </header>
     <%= yield %>
   </body>
+
+  <footer>
+    <div class="footer">
+
+    </div>
+    <p>&copy; MyriamProductions</p>
+  </footer>
+
 </html>

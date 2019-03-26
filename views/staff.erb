@@ -1,13 +1,30 @@
-<h1 id="header">Manage</h1>
+<h1 id="header">EDIT</h1>
 
-<form method="get" action="/bookings" >
-  <input type="submit" value="Go to bookings">
-</form>
+<table>
+  <tr>
+    <th id="header">BOOKINGS</th>
+    <th id="header">SESSIONS</th>
+    <th id="header">MEMBERS</th>
+  </tr>
 
-<form method="get" action="/sessions" >
-  <input type="submit" value="Go to sessions">
-</form>
-
-<form method="get" action="/members" >
-  <input type="submit" value="Go to members">
-</form>
+  <tr>
+    <td>
+      <form method="get" action="/bookings" >
+        <p>Manage bookings</p>
+        <input class="button" type="submit" value="Go to bookings">
+      </form>
+    </td>
+    <td>
+      <form method="get" action="/sessions" >
+        <p>Manage sessions</p>
+        <input class="button" type="submit" value="Go to sessions">
+      </form>
+    </td>
+    <td>
+      <form method="get" action="/members" >
+        <p>Manage members</p>
+        <input class="button" type="submit" value="Go to members">
+      </form>
+    </td>
+  </tr>
+</table>
