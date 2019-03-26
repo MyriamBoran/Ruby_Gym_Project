@@ -1,10 +1,12 @@
 <p> First Name: <%= @members.first_name %> </p>
 <p> Last Name: <%= @members.last_name %> </p>
 
-<form method="get" action= "/members/<%= @members.id %>/edit" target = "_self">
-  <input type="submit" value="UPDATE">
-</form>
+<div class="staff_container">
+  <form method="get" action= "/members/<%= @members.id %>/edit" target = "_self">
+    <input class="button" type="submit" value="UPDATE">
+  </form>
 
-<form method="post" action="/members/<%= @members.id %>/delete" >
-  <input type="submit" value="DELETE">
-</form>
+  <form method="post" action="/members/<%= @members.id %>/delete" >
+    <input class="button" type="submit" value="DELETE">
+  </form>
+</div>

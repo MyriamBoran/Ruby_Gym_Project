@@ -1,11 +1,13 @@
 <p>Update member: </p>
 
-<form method="post" action="/members/<%= @members.id %>">
-  <label for='first_name'><p>First Name: </p></label>
-  <input type="text" id="first_name" name="first_name" value="<%= @members.first_name %>"/>
+<div class="staff_container">
+  <form method="post" action="/members/<%= @members.id %>">
+    <label for='first_name'><p>First Name: </p></label>
+    <input class="button" type="text" id="first_name" name="first_name" value="<%= @members.first_name %>"/>
 
-  <label for='last_name'><p>Last Name: </p></label>
-  <input type="text" id="last_name" name="last_name" value="<%= @members.last_name %>"/>
+    <label for='last_name'><p>Last Name: </p></label>
+    <input class="button" type="text" id="last_name" name="last_name" value="<%= @members.last_name %>"/>
 
-  <input type="submit" value="Update member">
-</form>
+    <input class="button" type="submit" value="Update member">
+  </form>
+</div>

@@ -1,21 +1,22 @@
-<p> Session name: <%= @sessions.name %> </p>
-<p> Session capacity: <%= @sessions.attendance.count %> / <%= @sessions.capacity %> </p>
+<p> SESSION: <%= @sessions.name %> </p>
+<p> CAPACITY: <%= @sessions.attendance.count %> / <%= @sessions.capacity %> </p>
 
-<form method="get" action= "/sessions/<%= @sessions.id %>/edit" target = "_self">
-  <input type="submit" value="UPDATE">
-</form>
 
-<form method="post" action="/sessions/<%= @sessions.id %>/delete" >
-  <input type="submit" value="DELETE">
-</form>
+<div class="staff_container">
+  <form method="get" action= "/sessions/<%= @sessions.id %>/edit" target = "_self">
+    <input class="button" type="submit" value="UPDATE">
+  </form>
 
-<% if @sessions.attendance.empty? %>
-  <p>No attendees</p>
-<% else %>
-  <p>People attending: </p>
-  <% @sessions.attendance.each do |attendee| %>
-    <ul>
-      <li> <%= attendee.first_name %> <%= attendee.last_name %> </li>
-    </ul>
+  <form method="post" action="/sessions/<%= @sessions.id %>/delete" >
+    <input class="button" type="submit" value="DELETE">
+  </form>
+
+  <% if @sessions.attendance.empty? %>
+    <p>NO ATTENDEES</p>
+  <% else %>
+    <p>PEOPLE ATTENDING: </p>
+    <% @sessions.attendance.each do |attendee| %>
+        <p> <%= attendee.first_name %> <%= attendee.last_name %> </p>
+    <% end %>
   <% end %>
-<% end %>
+</div>

@@ -1,10 +1,26 @@
 <p> First Name: <%= @users.first_name %> </p>
 <p> Last Name: <%= @users.last_name %> </p>
 
-<form method="get" action= "/users/<%= @users.id %>/edit" target = "_self">
-  <input type="submit" value="UPDATE">
-</form>
 
-<form method="post" action="/users/<%= @users.id %>/delete" >
-  <input type="submit" value="DELETE">
-</form>
+<div class="staff_container">
+  <form method="get" action= "/users/<%= @users.id %>/edit" target = "_self">
+    <input class="button" type="submit" value="UPDATE">
+  </form>
+
+  <form method="post" action="/users/<%= @users.id %>/delete" >
+    <input class="button" type="submit" value="DELETE">
+  </form>
+</div>
+
+<div>
+  <table id="header" style="text-align:center;">
+    <tr>
+      <th>SESSION</th>
+    </tr>
+    <% @users.sessions.each do |session| %>
+    <tr>
+      <td> <%= session.name %> </td>
+    </tr>
+    <% end %>
+  </table>
+</div>

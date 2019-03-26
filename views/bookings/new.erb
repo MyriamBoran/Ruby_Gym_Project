@@ -1,23 +1,25 @@
-<p> New booking: </p>
+<h2 id="header"> New booking: </h2>
 
-<form method="post" action="/bookings">
+<div class="staff_container">
+  <form method="post" action="/bookings">
 
-  <label>
-    <select name="member_id">
-      <% for member in @members %>
-      <option value="<%= member.id %>"><%= member.first_name%> <%= member.last_name %></option>
-      <% end %>
-    </select>
-  </label>
+    <label>
+      <select name="member_id" class="button">
+        <% for member in @members %>
+        <option value="<%= member.id %>"><%= member.first_name%> <%= member.last_name %></option>
+        <% end %>
+      </select>
+    </label>
 
-  <label>
-    <select name='session_id'>
-      <% for session in @sessions %>
-      <option value="<%= session.id %>"><%= session.name %></option>
-      <% end %>
-    </select>
-  </label>
+    <label>
+      <select name='session_id' class="button">
+        <% for session in @sessions %>
+        <option value="<%= session.id %>"><%= session.name %></option>
+        <% end %>
+      </select>
+    </label>
 
-  <input class="button" type="submit" value="Add session"/>
+    <input class="button" type="submit" value="Add session"/>
 
-</form>
+  </form>
+</div>
