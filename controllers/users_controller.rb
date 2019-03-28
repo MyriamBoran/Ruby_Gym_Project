@@ -20,7 +20,7 @@ end
 post '/users' do
   @users = Member.new(params)
   @users.save
-  redirect to "/users/#{@users.id}"
+  redirect to "/users"
 end
 
 get '/users/:id/edit' do
