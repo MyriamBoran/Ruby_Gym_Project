@@ -1,15 +1,21 @@
-<h2 id='header'>Welcome!</h2>
+<h2 id='header' style="font-size: 40px">Would you like to ?</h2>
 
 <body id="container2">
   <div class="staff_container">
-    <a href= "/users/new" >Create Account</a>
+
+    <a class="button" href= "/users/new" >Create Account</a>
     <% if @users.empty? %>
       <p>No users</p>
     <% else %>
       <% @users.each do |user| %>
-        <p><%= user.first_name %> <%= user.last_name %><p>
-        <a href="/users/<%= user.id %>"> Log In </a>
-      <% end %>
+      <div id="users_list">
+          <p>
+            <img class="user-pic" src="images/icon.png" alt="symbol">
+            <span><%= user.first_name %> <%= user.last_name %></span>
+          </p>
+          <a class="log_in" href="/users/<%= user.id %>"> Log In </a>
+      </div>
     <% end %>
+  <% end %>
   </div>
 </body>
