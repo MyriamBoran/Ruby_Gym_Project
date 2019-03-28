@@ -20,9 +20,13 @@ get '/bookings/:id' do
 end
 
 post '/bookings' do
-  @bookings = Booking.new(params)
-  @bookings.save
-  redirect to "/bookings/#{@bookings.id}"
+  @session = Session.find(params[:session_id])
+  if @session.capacity > @session.attendance.count
+    @bookings = Booking.new(params)
+    @bookings.save
+    redirect to "/bookings/#{@bookings.id}"
+  end
+  redirect to "/sessions/#{@session.id}/full"
 end
 
 post '/bookings/:id/delete' do
