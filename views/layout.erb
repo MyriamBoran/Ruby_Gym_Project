@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html style="width: 100%" style="position: absolute">
   <head>
     <title>RubyCore</title>
     <link rel="stylesheet" href="/css/styles.css">
@@ -8,19 +8,22 @@
   </head>
 
   <body class="main">
-    <a href="/"><img src="/images/logo.png" alt="logo"></a>
+    <a href="/"><img class="logo_header" src="/images/logo.png" alt="logo"></a>
     <header class="intro_list">
       <div><a id="link1" href= "/staff">†staff</a></div>
       <div><a id="link2" href= "/users">†user</a></div>
     </header>
     <%= yield %>
+
+    <footer id="footer">
+      <div class="footer_content">
+        <h3>If you want to know more about Ruby Core and its designer, find them on twitter or github:</h3>
+        <div id="icon">
+          <a href="https://github.com/MyriamBoran"><img src="/images/github.png" id="github"></a>
+          <a href="https://twitter.com/WhenWhileUnder"><img src="/images/twitter.png" id="twitter"></a>
+        </div>
+        <p>&copy; MyriamProductions</p>
+      </div>
+    </footer>
   </body>
-
-  <footer>
-    <div class="footer">
-
-    </div>
-    <p>&copy; MyriamProductions</p>
-  </footer>
-
 </html>
