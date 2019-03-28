@@ -7,7 +7,7 @@ class Session
   def initialize(options)
     @id = options['id'].to_i if options['id']
     @name = options['name']
-    @capacity = options['capacity']
+    @capacity = options['capacity'].to_i
   end
 
   #CRUD
@@ -50,7 +50,7 @@ class Session
   #Search
 
   def attendance
-    sql = 'SELECT members.* FROM members, sessions JOIN bookings ON bookings.session_id = sessions.id WHERE session_id = $1'
+    sql = 'SELECT members.* FROM members JOIN bookings ON bookings.member_id = members.id WHERE session_id = $1'
     values = [@id]
     return SqlRunner.run(sql, values).map {|member| Member.new(member)}
   end
