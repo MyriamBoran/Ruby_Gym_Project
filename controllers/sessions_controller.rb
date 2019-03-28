@@ -17,6 +17,11 @@ get '/sessions/:id' do
   erb(:"sessions/show")
 end
 
+get '/sessions/:id/full' do
+  @sessions = Session.find(params[:id])
+  erb(:"sessions/full")
+end
+
 post '/sessions' do
   @sessions = Session.new(params)
   @sessions.save
