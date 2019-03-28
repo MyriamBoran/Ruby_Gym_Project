@@ -2,20 +2,19 @@
 
 <body id="container2">
   <div class="staff_container">
-
     <a class="button" href= "/users/new" >Create Account</a>
     <% if @users.empty? %>
       <p>No users</p>
     <% else %>
       <% @users.each do |user| %>
-      <div id="users_list">
+        <div id="users_list">
           <p>
             <img class="user-pic" src="images/icon.png" alt="symbol">
             <span><%= user.first_name %> <%= user.last_name %></span>
           </p>
           <a class="log_in" href="/users/<%= user.id %>"> Log In </a>
-      </div>
+        </div>
+      <% end %>
     <% end %>
-  <% end %>
   </div>
 </body>
