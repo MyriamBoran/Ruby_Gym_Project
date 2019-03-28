@@ -11,6 +11,11 @@
     <input class="button" type="submit" value="DELETE">
   </form>
 
+  <div class="staff_container">
+    <form method="get" action="/sessions" >
+      <input class="button" type="submit" value="Back to sessions">
+    </form>
+
   <% if @sessions.attendance.empty? %>
     <p>NO ATTENDEES</p>
   <% else %>
